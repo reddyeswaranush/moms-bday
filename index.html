@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Mom!</title>
+    <style>
+        body {
+            background-image: url("happy4.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+        header {
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #ff1493;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .content {
+            width: 40%;
+            padding: 20px;
+            color: gold;
+            font-size: 1.2em;
+            line-height: 1.6em;
+            margin-left: 350px;
+        }
+        .cube-container {
+            width: 50%;
+            height: 300px;
+            perspective: 1000px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cube {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            transform-style: preserve-3d;
+            transform: rotateX(20deg) rotateY(30deg);
+            animation: rotate 25s infinite linear;
+        }
+
+        .cube div {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border: 2px solid #fff;
+        }
+
+        .front  { transform: rotateY(0deg) translateZ(150px); }
+        .back   { transform: rotateY(180deg) translateZ(150px); }
+        .right  { transform: rotateY(90deg) translateZ(150px); }
+        .left   { transform: rotateY(-90deg) translateZ(150px); }
+        .top    { transform: rotateX(90deg) translateZ(150px); }
+        .bottom { transform: rotateX(-90deg) translateZ(150px); }
+
+        @keyframes rotate {
+            from {
+                transform: rotateX(0deg) rotateY(0deg);
+            }
+            to {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            .content {
+                width: 45%;
+                margin-left: 5%;
+            }
+            .cube-container {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .content {
+                width: 90%;
+                margin: 0;
+                text-align: center;
+            }
+
+            .cube-container {
+                width: 80%;
+                margin-top: 20px;
+            }
+
+            .cube {
+                width: 200px;
+                height: 200px;
+            }
+
+            .cube div {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+            .content {
+                width: 100%;
+                padding: 10px;
+                font-size: 1em;
+            }
+
+            .cube {
+                width: 150px;
+                height: 150px;
+            }
+
+            .cube div {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Happy Birthday, Mom!</h1>
+    </header>
+
+    <div class="main-content">
+        <div class="content">
+            <p>Dear Mom,</p>
+            <p>You are the most amazing person in my life, and today we celebrate your kindness, your love, and everything that makes you so special. Your strength, compassion, and wisdom have shaped me in ways words can't describe. I hope this day brings you as much happiness as you have given me over the years.</p>
+            <p>Wishing you all the love and joy in the world! Happy Birthday!</p>
+        </div>
+
+        <div class="cube-container">
+            <div class="cube">
+                <div class="front" style="background-image: url('mom1.jpg');"></div>
+                <div class="back" style="background-image: url('mom2.jpg');"></div>
+                <div class="right" style="background-image: url('mom3.jpg');"></div>
+                <div class="left" style="background-image: url('mom4.jpg');"></div>
+                <div class="top" style="background-image: url('mom5.jpg');"></div>
+                <div class="bottom" style="background-image: url('mom7.jpg');"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
